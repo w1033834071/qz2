@@ -6,6 +6,12 @@
 # 传入动态参数且 内部已经自动能够识别传入的动态参数   牛！！！！
 # 一个函数可以附加多个装饰器
 
+'''
+多装饰器原理：
+    将outer的inner当作参数传递给了outer_0
+    相当于outer_0中的func = inner(outer)
+'''
+
 def outer_0(func):
     def inner(*args,**kwargs):
         print("附加装饰器")
