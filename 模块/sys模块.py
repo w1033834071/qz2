@@ -19,9 +19,11 @@ def fun2():
     pass
 
 def fun3():
-    N = 100
+    N = 31
     for i in range(N):
-        # print("%s%%" %i)
+        sys.stdout.write('\r')    #每次打印完就清空一次
+        sys.stdout.write("%s%% | %s" %(int(i/30*100), int(i/30*100) * '*'))
+        sys.stdout.flush()
         time.sleep(0.3)
 
 fun3()

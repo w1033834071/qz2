@@ -32,8 +32,27 @@ import re
 # print(li)
 # 结果 ['one', 'two', 'three', 'four', '']
 
-ret = re.split('[bc]','abcd')
-print(ret)
+# ret = re.split('[bc]','abcd')
+# print(ret)
+
+
+# 打开一个文件需要\\转义
+# f = open('D:\\abc.txt')
+# ret = f.read()
+# f.close()
+# print(ret)
+
+
+# 理应用‘\\’表示‘\’ 但在python中‘\\’表示一个‘\’(python会先匹配ASCII码表)  所以得用俩组\\    表示正则中的‘\\’  也因此引出了原生字符集  r
+# r = re.findall("\\\\",'abc\d')
+# print(r)
+
+r = re.findall(r'\\','abc\d')
+print(r)
+
+
+
+
 
 
 
