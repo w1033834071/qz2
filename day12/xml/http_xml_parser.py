@@ -20,19 +20,19 @@ from xml.etree import ElementTree as ET
 
 
 #  写入xml文件
-# food = open("food.xml","w",encoding="utf-8")
-# food.write(result)
+food = open("food.xml","w",encoding="utf-8")
+food.write(result)
 
 
 #  解析并修改xml
-parser_result = ET.parse("food.xml")
-root = parser_result.getroot()
-for node in root.iter("food"):
-    name = node.find("name").text
-    if name == "French Toast":
-        node.find("name").text = "French Fries"
-        break
-
-parser_result.write("food.xml")
+# parser_result = ET.parse("food.xml")
+# root = parser_result.getroot()
+# for node in root.iter("food"):
+#     name = node.find("name").text
+#     if name == "French Toast":
+#         node.find("name").text = "French Fries"
+#         break
+#
+# parser_result.write("food.xml")
 
 # tree.write("food.xml")

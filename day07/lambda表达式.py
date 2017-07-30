@@ -4,7 +4,7 @@
 def f1():
     return 123
 
-# lambda表达式即为了代替一些点单的函数
+# lambda表达式即为了代替一些简单的函数
 
 f2 = lambda : 123
 
