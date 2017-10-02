@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老男孩</title>
+    <style>
+        /*  ~ 表示可通过一个名字查找到*/
+        div[wanglinkai~='boy']{
+            font-size: 40px;
+            color: #f45738;
+        }
+        /*  | 以en开头*/
+        [lang|='en']{
+             font-size: 40px;
+            color: #e7f424;
+        }
+
+        p[wanglinkai='boy']{
+            font-size: 40px;
+            color: #2aa8f4;
+        }
+
+    </style>
+</head>
+<body>
+    <!--自定义属性-->
+    <div wanglinkai="boy girl">王林锴</div>
+    <div lang="en-us">en-us</div>
+    <p wanglinkai="boy">王林锴</p>
+</body>
+</html>
